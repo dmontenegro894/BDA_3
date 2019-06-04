@@ -1,0 +1,32 @@
+<div class="row">
+    {{#each librerias}}
+    <div class='col-md-3'>
+        <div class='card'>
+            <div class='card-body'>
+                <h4 class='card-tittle'>
+                    {{codigoLibreria}} 
+                </h4>
+                <p> {{nombreLibreria}}
+                </p>
+                <p> {{paisLibreria}}
+                </p>
+                <p> {{ubicacionLibreria}}
+                </p>
+                <p> {{telefonoLibreria}}
+                </p>
+                <p> {{horarioLibreria}}
+                </p>
+            </div>
+        </div>
+    </div>
+    {{else}}
+     <div class = 'card mx-auto'>
+         <div class = 'card-body'>
+             <h1>
+                 Hola {{user.usuarioUser}}
+             </h1>
+             <p class="lead"> No hay librerías</p>
+         </div>
+     </div>
+    {{/each}}
+</div>

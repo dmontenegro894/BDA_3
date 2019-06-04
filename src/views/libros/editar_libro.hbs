@@ -1,0 +1,50 @@
+<div class='col md-4 mx-auto'>
+    <div class="card">
+        <div class="card header">
+            <h3> Editar libro</h3>
+        </div>
+        <div class='card-body'>
+            <form action="/libros/editar_libro/{{libro._id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="">
+                <div class="form-group">
+                    <input type="text" name="codigoLibro" class="form-control" placeholder="" ;
+                        value="{{libro.codigoLibro}}">
+                    <!Recibe libro de libros.js..>
+                </div>
+                <div class="form-group">
+                    <textarea name="Libreria" class="form-control">{{libro.Libreria}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="nombreLibro" class="form-control">{{libro.nombreLibro}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="temaLibro" class="form-control">{{libro.temaLibro}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="descripcionLibro" class="form-control">{{libro.descripcionLibro}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="cantidadVendidaLibro" class="form-control">{{libro.cantidadVendidaLibro}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="cantidadDisponibleLibro" class="form-control">{{libro.cantidadDisponibleLibro}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="precioLibro" class="form-control">{{libro.precioLibro}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type='submit'>
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

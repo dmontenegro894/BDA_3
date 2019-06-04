@@ -1,0 +1,39 @@
+<div class='col md-4 mx-auto'>
+    <div class="card">
+        <div class="card header">
+            <h3> Editar promocion</h3>
+        </div>
+        <div class='card-body'>
+            <form action="/promociones/editar_promocion/{{promocion._id}}?_method=PUT" method = "POST">
+                <input type="hidden" name="_method" value=""> 
+                <div class="form-group">
+                    <input type="text" name="codigoPromocion" class="form-control" placeholder="" ;
+                        value="{{promocion.codigoPromocion}}">
+                    <!Recibe promocion de promociones.js..>
+                </div>
+                <div class="form-group">
+                    <textarea name="descripcionPromocion" class="form-control">{{promocion.descripcionPromocion}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="fechaInicioPromocion" class="form-control">{{promocion.fechaInicioPromocion}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="fechaFinPromocion" class="form-control">{{promocion.fechaFinPromocion}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="descuentoPromocion" class="form-control">{{promocion.descuentoPromocion}}
+                </textarea>
+                </div>
+                <div class="form-group">
+
+                    <button class="btn btn-primary btn-block" type='submit'>
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<div class='col md-4 mx-auto'>
+    <div class="card">
+        <div class="card header">
+            <h3> Editar cliente</h3>
+        </div>
+        <div class='card-body'>
+            <form action="/clientes/editar_cliente/{{cliente._id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="">
+                <div class="form-group">
+                    <input type="text" name="cedulaUser" class="form-control" placeholder="" ;
+                        value="{{cliente.cedulaUser}}">
+                </div>
+                <div class="form-group">
+                    <textarea name="nombreUser" class="form-control">{{cliente.nombreUser}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="fecNacUser" class="form-control">{{cliente.fecNacUser}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="tipoUser" class="form-control">{{cliente.tipoUser}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="lugarUser" class="form-control">{{cliente.lugarUser}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="email" class="form-control">{{cliente.email}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="telefonoUser" class="form-control">{{cliente.telefonoUser}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="usuarioUser" class="form-control">{{cliente.usuarioUser}}
+                </textarea>
+                </div>
+                <div class="form-group">
+
+                    <button class="btn btn-primary btn-block" type='submit'>
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

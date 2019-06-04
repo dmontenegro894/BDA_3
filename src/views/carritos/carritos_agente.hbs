@@ -1,0 +1,48 @@
+{{#if Libros}}
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+        <ul class="list-group">
+            {{# each Libros}}
+            <li class="list-group-item">
+                <strong> Libro solicitado: {{this.item.nombreLibro}} </strong>
+                <span class="badge"> Cliente: {{this.item.user}}</span>
+                <span class="badge"> Cantidad: {{this.cantidad}}</span>
+                <span class="badge">Precio: {{this.precioLibro}}</span>
+                <div class="card-body">
+                    <form action="/librerias" method="POST">
+                        <button class="btn btn-primary btn-block" type="submit">
+                            Enviar correo
+
+                        </button>
+                    </form>
+
+                    <button class="btn btn-primary btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                        Opciones <span class="caret">
+                        </span></button>
+                    <ul class="dropdown-menu">
+                        <li> <a href="/reducir/{{this.item._id}}"> Pedido realizado </a> </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <form action="/" method="POST">
+                        <div class="row">
+                    </form>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+        <strong>Total: {{totalPrecioLibro}} </strong>
+    </div>
+</div>
+<hr>
+{{else}}
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+        <h2> No hay libros en el carrito de compras </h2>
+    </div>
+</div>
+{{/if}}

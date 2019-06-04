@@ -1,0 +1,48 @@
+<div class="row">
+    {{#each libros}}
+    <div class='col-md-3'>
+        <div class='card'>
+            <div class='card-body'>
+                <h4 class='card-tittle'>
+                    {{codigoLibro}} <a href="/libros/editar/{{_id}}"> <i class="fas fa-edit"></i> </a>
+                </h4>
+                <p> {{Libreria}}
+                </p>
+                <p> {{nombreLibro}}
+                </p>
+                <p> {{temaLibro}}
+                </p>
+                <p> {{descripcionLibro}}
+                </p>
+                <p> {{cantidadVendidaLibro}} 
+                </p>
+                <p> {{cantidadDisponibleLibro}}
+                </p>
+                <p> {{precioLibro}}
+                </p>
+                <form action="/libros/eliminar/{{_id}}?_method=DELETE" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button class="btn btn-primary btn-block btn-sm" type="submit">
+                        Eliminar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class='card mx-auto'>
+        <div class='card-body'>
+            <p class="lead"> No hay libros, empiece a crear dando clic en el siguiente botón</p>
+            <a href='/libros/add' class="btn btn-primary btn-block"> Crear libro</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
+<div>
+    <form action="/librerias/add" >
+        <input type="hidden" name="_method" >
+        <button class="btn btn-primary btn-block btn-sm" type="submit">
+            Agregar más librerías
+        </button>
+    </form>
+</div>

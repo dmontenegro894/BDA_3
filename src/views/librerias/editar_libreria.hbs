@@ -1,0 +1,43 @@
+<div class='col md-4 mx-auto'>
+    <div class="card">
+        <div class="card header">
+            <h3> Editar librería</h3>
+        </div>
+        <div class='card-body'>
+            <form action="/librerias/editar_libreria/{{libreria._id}}?_method=PUT" method = "POST">
+                <input type="hidden" name="_method" value=""> 
+                <div class="form-group">
+                    <input type="text" name="codigoLibreria" class="form-control" placeholder="" ;
+                        value="{{libreria.codigoLibreria}}">
+                    <!Recibe libreria de librerias.js..>
+                </div>
+                <div class="form-group">
+                    <textarea name="nombreLibreria" class="form-control">{{libreria.nombreLibreria}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="paisLibreria" class="form-control">{{libreria.paisLibreria}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="ubicacionLibreria" class="form-control">{{libreria.ubicacionLibreria}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="telefonoLibreria" class="form-control">{{libreria.telefonoLibreria}}
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="horarioLibreria" class="form-control">{{libreria.horarioLibreria}}
+                </textarea>
+                </div>
+                <div class="form-group">
+
+                    <button class="btn btn-primary btn-block" type='submit'>
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

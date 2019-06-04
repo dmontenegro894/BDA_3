@@ -1,0 +1,28 @@
+<div class="col-md-3 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h6>Quiero ver libros que sean cumplan lo siguiente...</h6>
+        </div>
+        <div class="card-body">
+            <form action="/libros/buscar_varios" method="POST">
+               <div class="form-group">
+                    <textarea name="Libreria" class="form-control" placeholder="Libreria"></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="nombreLibro" class="form-control" placeholder="Nombre libro"></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="temaLibro" class="form-control" placeholder="Tema"></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea name="precioLibro" class="form-control" placeholder="Precio"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Buscar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="row">
+    {{#each clientes}}
+    <div class='col-md-3'>
+        <div class='card'>
+            <div class='card-body'>
+                <h4 class='card-tittle'>
+                    {{cedulaUser}} <a href="/clientes/editar/{{_id}}"> <i class="fas fa-edit"></i> </a>
+                </h4>
+                <p> {{nombreUser}}
+                </p>
+                <p> {{fecNacUser}}
+                </p>
+                <p> {{tipoUser}}
+                </p>
+                <p> {{lugarUser}}
+                </p>
+                <p> {{email}} 
+                </p>
+                <p> {{telefonoUser}} 
+                </p>
+                <p> {{usuarioUser}} 
+                </p>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class='card mx-auto'>
+        <div class='card-body'>
+            <h1>
+                Hola {{user.usuarioUser}}
+            </h1>
+            <p class="lead"> No hay clientes</p>
+            <a href='/clientes/add' class="btn btn-primary btn-block"> Crear cliente</a>
+        </div>
+    </div>
+    {{/each}}
+</div>

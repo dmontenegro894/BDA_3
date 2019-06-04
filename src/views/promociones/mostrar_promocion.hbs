@@ -1,0 +1,42 @@
+<div class="row">
+    {{#each promociones}}
+    <div class='col-md-3'>
+        <div class='card'>
+            <div class='card-body'>
+                <h4 class='card-tittle'>
+                    {{codigoPromocion}} <a href="/promociones/editar/{{_id}}"> <i class="fas fa-edit"></i> </a>
+                </h4>
+                <p> {{descripcionPromocion}}
+                </p>
+                <p> {{fechaInicioPromocion}}
+                </p>
+                <p> {{fechaFinPromocion}}
+                </p>
+                <p> {{descuentoPromocion}}
+                </p>
+                  <form action="/promociones/eliminar/{{_id}}?_method=DELETE" method="POST">
+                      <input type="hidden" name="_method" value="DELETE">
+                      <button class="btn btn-primary btn-block btn-sm" type="submit">
+                          Eliminar
+                      </button>
+                  </form>
+            </div>
+        </div>
+    </div>
+    {{else}}
+     <div class = 'card mx-auto'>
+         <div class = 'card-body'>
+             <p class="lead"> No hay promociones, empiece a crear dando clic en el siguiente botón</p>
+             <a href='/promociones/add' class="btn btn-primary btn-block"> Crear promoción</a>
+         </div>
+     </div>
+    {{/each}}
+</div>
+<div>
+    <form action="/promociones/add" >
+        <input type="hidden" name="_method" >
+        <button class="btn btn-primary btn-block btn-sm" type="submit">
+            Agregar más promociones
+        </button>
+    </form>
+</div>
